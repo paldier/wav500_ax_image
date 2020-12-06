@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/version.mk
 
-PKG_NAME:=wav500-images
+PKG_NAME:=wav500_ax_image
 PKG_VERSION:=1
 PKG_RELEASE:=2
 PKG_LICENSE:=GPL-2.0
@@ -28,7 +28,7 @@ define Package/wav500-images
   SECTION:=utils
   CATEGORY:=Lantiq
   TITLE:=Wav500 WiFi driver images
-  DEPENDS:=@TARGET_lantiq_xrx500 @PACKAGE_kmod-iwlwav-driver-uci
+  DEPENDS:=@TARGET_lantiq_xrx500 @PACKAGE_kmod-iwlwav-driver-uci @PACKAGE_ltq-wlan-wave_6x-uci
 endef
 
 define Package/$(PKG_NAME)/description
