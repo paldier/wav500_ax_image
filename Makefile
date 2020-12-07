@@ -24,7 +24,7 @@ endif
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/wav500-images
+define Package/wav500_ax_image
   SECTION:=utils
   CATEGORY:=Lantiq
   TITLE:=Wav500 WiFi driver images
@@ -41,7 +41,7 @@ endef
 define Build/Compile
 endef
 
-define Package/wav500-images/install
+define Package/wav500_ax_image/install
 	$(INSTALL_DIR) -p $(1)/lib/firmware
 	$(INSTALL_BIN) ./files/$(WAVE_TARGET)/lib/firmware/* $(1)/lib/firmware/
 ifeq ($(CONFIG_TARGET_intel_mips_xrx500_DEVICE_PHICOMM_K3CA1),y)
@@ -58,4 +58,4 @@ ifeq ($(CONFIG_TARGET_intel_mips_xrx500_DEVICE_PHICOMM_K3CA1),y)
 endif
 endef
 
-$(eval $(call BuildPackage,wav500-images))
+$(eval $(call BuildPackage,wav500_ax_image))
