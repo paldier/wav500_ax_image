@@ -31,7 +31,7 @@ define Package/wav500_ax_image
   DEPENDS:=@TARGET_lantiq_xrx500 +kmod-iwlwav-driver-uci +ltq-wlan-wave_6x-uci
 endef
 
-define Package/$(PKG_NAME)/description
+define Package/wav500_ax_image/description
 Wav500 WiFi driver images
 endef
 
