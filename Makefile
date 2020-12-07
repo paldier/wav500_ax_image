@@ -28,7 +28,7 @@ define Package/wav500_ax_image
   SECTION:=utils
   CATEGORY:=Lantiq
   TITLE:=Wav500 WiFi driver images
-  DEPENDS:=@TARGET_lantiq_xrx500 @PACKAGE_kmod-iwlwav-driver-uci @PACKAGE_ltq-wlan-wave_6x-uci
+  DEPENDS:=@TARGET_lantiq_xrx500 +kmod-iwlwav-driver-uci +ltq-wlan-wave_6x-uci
 endef
 
 define Package/$(PKG_NAME)/description
